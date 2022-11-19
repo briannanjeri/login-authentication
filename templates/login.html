@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <style>
+ * {
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .login {
+        text-align: center;
+        margin: 10px auto;
+        font-weight: 400;
+        
+    }
+
+    #form{
+        display: block;
+        width: 200px;
+        margin: auto;
+        text-align: center;
+
+
+    }
+    .fields input{
+        margin: 15px 0;
+        padding: 12px 0;
+        border: 1px solid black;
+        
+    } 
+
+    .signup {
+        text-align: center;  
+        margin: 15px 0;      
+    }
+    #submit {
+        width: 150px;
+        border: 2px solid #000;
+        padding: 12px 0;
+        margin: 10px 0;
+        position: relative;
+        z-index: 1;
+        font-size: 15px;
+        border: 2px solid black;
+    }
+
+    #submit:hover {
+        font-size: 22px;
+        color:blue;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="login">
+    <h1>login page</h1> 
+    </div>
+
+    <form id="form" method="POST" action="">
+        <div class="fields">
+        {{form.hidden_tag()}}
+        {{form.username}}
+        {{form.password}}
+        {{form.submit}}
+       </div>
+
+    </form>
+
+
+
+    <div class="signup">
+    <a href="{{url_for('register')}}">Don't have an account signup</a>
+   </div>
+
+
+</body>
+</html>
